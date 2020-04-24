@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component inherit-compiler-output="true" name="NewModuleRootManager">
+    <exclude-output/>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder isTestSource="false" url="file://$MODULE_DIR$"/>
+      <excludeFolder url="file://$MODULE_DIR$/com.oracle.truffle.trufflenode.jdk8"/>
+      <excludeFolder url="file://$MODULE_DIR$/com.oracle.truffle.trufflenode.jniboundaryprofiler"/>
+      <excludeFolder url="file://$MODULE_DIR$/com.oracle.truffle.trufflenode"/>
+      <excludeFolder url="file://$MODULE_DIR$/com.oracle.truffle.trufflenode.jdk11"/>
+    </content>
+    <orderEntry jdkName="Python 2.7" jdkType="Python SDK" type="jdk"/>
+    <orderEntry forTests="false" type="sourceFolder"/>
+    <orderEntry module-name="mx.graal-js" type="module"/>
+    <orderEntry module-name="mx.regex" type="module"/>
+    <orderEntry module-name="mx.truffle" type="module"/>
+    <orderEntry module-name="mx.sdk" type="module"/>
+    <orderEntry module-name="mx" type="module"/>
+  </component>
+</module>

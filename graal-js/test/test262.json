@@ -1,0 +1,2145 @@
+{
+  "testFiles" : [ {
+    "filePath" : "annexB/built-ins/Function/createdynfn-no-line-terminator-html-close-comment-body.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "built-ins/Array/prototype/unshift/length-near-integer-limit.js",
+    "status" : "SKIP",
+    "comment" : "Long-running test: we iterate to ~2^53."
+  }, {
+    "filePath" : "built-ins/Atomics/wait/undefined-index-defaults-to-zero.js",
+    "status" : "SKIP",
+    "comment" : "fails randomly, highly timing sensitive (sleep(5) + wait(10)), will be fixed by Test262 update"
+  }, {
+    "filePath" : "built-ins/Promise/all/invoke-resolve-get-error-close.js",
+    "status" : "FAIL",
+    "comment" : "https://github.com/tc39/test262/issues/2206"
+  }, {
+    "filePath" : "built-ins/Promise/allSettled/invoke-resolve-get-error-close.js",
+    "status" : "FAIL",
+    "comment" : "https://github.com/tc39/test262/issues/2206"
+  }, {
+    "filePath" : "built-ins/Promise/race/invoke-resolve-get-error-close.js",
+    "status" : "FAIL",
+    "comment" : "https://github.com/tc39/test262/issues/2206"
+  }, {
+    "filePath" : "built-ins/Proxy/defineProperty/targetdesc-not-configurable-writable-desc-not-writable.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "built-ins/Proxy/deleteProperty/targetdesc-is-configurable-target-is-not-extensible.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "built-ins/Proxy/getOwnPropertyDescriptor/resultdesc-is-not-configurable-not-writable-targetdesc-is-writable.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/alternations.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Alternations in lookbehind assertion, not supported by either TRegex or Joni. However, support for these could be added to TRegex."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/back-references-to-captures.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Capture groups and backreferences in lookbehind assertions. Out of scope of TRegex due to backreferences. Not supported in Joni due to limited lookbehind support (the regular expressions use unbounded quantifiers in the lookbehind assertions)."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/back-references.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Backreferences in lookbehind assertions. Similar to back-references-to-captures. However, these tests could be handled in Joni as the backreferences point outside of the lookbehind assertion."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/captures-negative.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Alternation in negative lookbehind assertion. Negative lookaround is not supported by TRegex and alternations are not supported in Joni. Negative lookaround might be complex to handle in TRegex but alternations in lookbehind could be handled duplicating the assertion in Joni."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/captures.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Fails because Joni runs lookbehind assertions left-to-right instead of right-to-left."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/do-not-backtrack.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Neither TRegex nor Joni support unbounded quantifiers in lookbehind assertions."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/greedy-loop.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Neither TRegex nor Joni support unbounded quantifiers in lookbehind assertions."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/misc.js",
+    "status" : "FAIL",
+    "comment" : "GR-10079: Assertions and quantifiers in lookbehind assertions."
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/mutual-recursive.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/nested-lookaround.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/sliced-strings.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/start-of-line.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/sticky.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/variable-length.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/lookBehind/word-boundary.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/RegExp/named-groups/lookbehind.js",
+    "status" : "FAIL",
+    "comment" : "Fails because Joni matches lookbehind left-to-right and so the rightmost match of a capture group in a lookbehind wins. In ECMAScript, lookbehind is to be matched right-to-left and the leftmost match of a capture group in a lookbehind should be kept."
+  }, {
+    "filePath" : "built-ins/RegExp/named-groups/unicode-match.js",
+    "status" : "FAIL",
+    "comment" : "Some regular expressions (lines 22-25 and 38-41) use both backreferences (TRegex bails out) and the Unicode flag (Joni bails out)."
+  }, {
+    "filePath" : "built-ins/RegExp/named-groups/unicode-references.js",
+    "status" : "FAIL",
+    "comment" : "The regular expressions use both backreferences (TRegex bails out) and the Unicode flag (Joni bails out)."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Alphabetic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Any.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/ASCII.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/ASCII_Hex_Digit.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Assigned.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Bidi_Control.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Bidi_Mirrored.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Case_Ignorable.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Cased.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_Casefolded.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_Casemapped.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_Lowercased.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_NFKC_Casefolded.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_Titlecased.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Changes_When_Uppercased.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Dash.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Default_Ignorable_Code_Point.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Deprecated.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Diacritic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Emoji.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Emoji_Component.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Emoji_Modifier.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Emoji_Modifier_Base.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Emoji_Presentation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Extended_Pictographic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Extender.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Cased_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Close_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Connector_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Control.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Currency_Symbol.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Dash_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Decimal_Number.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Enclosing_Mark.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Final_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Format.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Initial_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Letter_Number.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Line_Separator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Lowercase_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Mark.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Math_Symbol.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Modifier_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Modifier_Symbol.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Nonspacing_Mark.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Number.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Open_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Other.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Other_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Other_Number.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Other_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Other_Symbol.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Paragraph_Separator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Private_Use.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Separator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Space_Separator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Spacing_Mark.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Surrogate.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Symbol.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Titlecase_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Unassigned.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/General_Category_-_Uppercase_Letter.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Grapheme_Base.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Grapheme_Extend.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Hex_Digit.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/ID_Continue.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/ID_Start.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Ideographic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/IDS_Binary_Operator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/IDS_Trinary_Operator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Join_Control.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Logical_Order_Exception.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Lowercase.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Math.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Noncharacter_Code_Point.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Pattern_Syntax.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Pattern_White_Space.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Quotation_Mark.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Radical.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Regional_Indicator.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Adlam.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Ahom.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Anatolian_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Arabic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Armenian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Avestan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Balinese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Bamum.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Bassa_Vah.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Batak.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Bengali.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Bhaiksuki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Bopomofo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Brahmi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Braille.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Buginese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Buhid.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Canadian_Aboriginal.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Carian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Caucasian_Albanian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Chakma.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Cham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Cherokee.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Common.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Coptic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Cuneiform.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Cypriot.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Cyrillic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Deseret.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Devanagari.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Dogra.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Duployan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Egyptian_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Elbasan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Elymaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Ethiopic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Georgian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Glagolitic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Gothic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Grantha.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Greek.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Gujarati.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Gunjala_Gondi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Gurmukhi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Han.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hangul.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hanifi_Rohingya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hanunoo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hatran.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hebrew.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Hiragana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Imperial_Aramaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Inherited.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Inscriptional_Pahlavi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Inscriptional_Parthian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Javanese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Kaithi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Kannada.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Katakana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Kayah_Li.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Kharoshthi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Khmer.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Khojki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Khudawadi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Lao.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Latin.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Lepcha.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Limbu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Linear_A.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Linear_B.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Lisu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Lycian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Lydian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Mahajani.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Makasar.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Malayalam.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Mandaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Manichaean.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Marchen.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Masaram_Gondi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Medefaidrin.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Meetei_Mayek.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Mende_Kikakui.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Meroitic_Cursive.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Meroitic_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Miao.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Modi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Mongolian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Mro.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Multani.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Myanmar.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Nabataean.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Nandinagari.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_New_Tai_Lue.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Newa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Nko.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Nushu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Nyiakeng_Puachue_Hmong.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Ogham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Ol_Chiki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Hungarian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Italic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_North_Arabian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Permic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Persian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Sogdian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_South_Arabian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Old_Turkic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Oriya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Osage.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Osmanya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Pahawh_Hmong.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Palmyrene.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Pau_Cin_Hau.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Phags_Pa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Phoenician.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Psalter_Pahlavi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Rejang.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Runic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Samaritan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Saurashtra.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Sharada.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Shavian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Siddham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_SignWriting.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Sinhala.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Sogdian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Sora_Sompeng.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Soyombo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Sundanese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Syloti_Nagri.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Syriac.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tagalog.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tagbanwa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tai_Le.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tai_Tham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tai_Viet.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Takri.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tamil.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tangut.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Telugu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Thaana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Thai.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tibetan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tifinagh.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Tirhuta.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Ugaritic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Vai.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Wancho.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Warang_Citi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Yi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_-_Zanabazar_Square.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Adlam.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Ahom.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Anatolian_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Arabic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Armenian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Avestan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Balinese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Bamum.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Bassa_Vah.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Batak.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Bengali.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Bhaiksuki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Bopomofo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Brahmi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Braille.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Buginese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Buhid.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Canadian_Aboriginal.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Carian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Caucasian_Albanian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Chakma.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Cham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Cherokee.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Common.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Coptic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Cuneiform.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Cypriot.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Cyrillic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Deseret.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Devanagari.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Dogra.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Duployan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Egyptian_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Elbasan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Elymaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Ethiopic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Georgian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Glagolitic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Gothic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Grantha.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Greek.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Gujarati.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Gunjala_Gondi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Gurmukhi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Han.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hangul.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hanifi_Rohingya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hanunoo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hatran.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hebrew.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Hiragana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Imperial_Aramaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Inherited.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Inscriptional_Pahlavi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Inscriptional_Parthian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Javanese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Kaithi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Kannada.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Katakana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Kayah_Li.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Kharoshthi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Khmer.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Khojki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Khudawadi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Lao.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Latin.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Lepcha.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Limbu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Linear_A.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Linear_B.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Lisu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Lycian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Lydian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Mahajani.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Makasar.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Malayalam.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Mandaic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Manichaean.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Marchen.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Masaram_Gondi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Medefaidrin.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Meetei_Mayek.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Mende_Kikakui.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Meroitic_Cursive.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Meroitic_Hieroglyphs.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Miao.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Modi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Mongolian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Mro.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Multani.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Myanmar.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Nabataean.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Nandinagari.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_New_Tai_Lue.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Newa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Nko.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Nushu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Nyiakeng_Puachue_Hmong.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Ogham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Ol_Chiki.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Hungarian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Italic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_North_Arabian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Permic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Persian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Sogdian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_South_Arabian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Old_Turkic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Oriya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Osage.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Osmanya.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Pahawh_Hmong.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Palmyrene.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Pau_Cin_Hau.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Phags_Pa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Phoenician.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Psalter_Pahlavi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Rejang.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Runic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Samaritan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Saurashtra.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Sharada.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Shavian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Siddham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_SignWriting.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Sinhala.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Sogdian.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Sora_Sompeng.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Soyombo.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Sundanese.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Syloti_Nagri.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Syriac.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tagalog.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tagbanwa.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tai_Le.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tai_Tham.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tai_Viet.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Takri.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tamil.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tangut.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Telugu.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Thaana.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Thai.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tibetan.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tifinagh.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Tirhuta.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Ugaritic.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Vai.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Wancho.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Warang_Citi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Yi.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Script_Extensions_-_Zanabazar_Square.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Sentence_Terminal.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Soft_Dotted.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Terminal_Punctuation.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Unified_Ideograph.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Uppercase.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/Variation_Selector.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/White_Space.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/XID_Continue.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/RegExp/property-escapes/generated/XID_Start.js",
+    "status" : "SKIP",
+    "comment" : "Long-running generated Unicode tests."
+  }, {
+    "filePath" : "built-ins/String/prototype/toLowerCase/Final_Sigma_U180E.js",
+    "status" : "FAIL",
+    "comment" : "String.toLowerCase() does not handle Final_Sigma special casing with respect to u180e correctly"
+  }, {
+    "filePath" : "built-ins/String/prototype/toLowerCase/special_casing_conditional.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "built-ins/TypedArray/prototype/set/typedarray-arg-set-values-same-buffer-other-type.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "BIG_ENDIAN" : "SKIP"
+    },
+    "comment" : "Fails on big endian and works on little endian"
+  }, {
+    "filePath" : "intl402/Collator/missing-unicode-ext-value-defaults-to-true.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "intl402/Collator/prototype/compare/non-normative-sensitivity.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/Collator/usage-de.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/constructors-string-and-single-element-array.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/Date/prototype/returns-same-results-as-DateTimeFormat.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/date-time-options.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/ignore-invalid-unicode-ext-values.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/prototype/format/bound-to-datetimeformat-instance.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/prototype/formatToParts/main.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/prototype/resolvedOptions/basic.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "Fails on SVM due to timezone issues, see GR-4538"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/prototype/resolvedOptions/hourCycle.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/prototype/resolvedOptions/resolved-locale-with-hc-unicode.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/DateTimeFormat/required-date-time-formats.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/fallback-locales-are-supported.js",
+    "status" : "SKIP",
+    "comment" : "failing on JDK-11"
+  }, {
+    "filePath" : "intl402/Intl/getCanonicalLocales/canonicalized-tags.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/Intl/getCanonicalLocales/invalid-tags.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/Intl/getCanonicalLocales/non-iana-canon.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "intl402/Intl/getCanonicalLocales/preferred-grandfathered.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/Intl/getCanonicalLocales/preferred-variant.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/language-tags-canonicalized.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/language-tags-invalid.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/language-tags-valid.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/language-tags-with-underscore.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/ListFormat/constructor/constructor/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/ListFormat/constructor/supportedLocalesOf/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/Number/prototype/toLocaleString/returns-same-results-as-NumberFormat.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/NumberFormat/currencyDisplay-unit.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-01-15)"
+  }, {
+    "filePath" : "intl402/NumberFormat/ignore-invalid-unicode-ext-values.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/NumberFormat/numbering-system-options.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/format/bound-to-numberformat-instance.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/format/format-fraction-digits-precision.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15730"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/format/format-fraction-digits.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/format/format-significant-digits-precision.js",
+    "status" : "FAIL",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "TODO: evaluate (Test262 tests update 2019-05-21)"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/format/format-significant-digits.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/NumberFormat/prototype/formatToParts/main.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "GR-15359"
+  }, {
+    "filePath" : "intl402/NumberFormat/style-unit.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-01-15)"
+  }, {
+    "filePath" : "intl402/RelativeTimeFormat/constructor/constructor/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "test262 update 2018-07-12"
+  }, {
+    "filePath" : "intl402/RelativeTimeFormat/constructor/supportedLocalesOf/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/Segmenter/constructor/constructor/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/Segmenter/constructor/supportedLocalesOf/locales-invalid.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "intl402/Segmenter/constructor/supportedLocalesOf/locales-specific.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-01-15)"
+  }, {
+    "filePath" : "intl402/supportedLocalesOf-consistent-with-resolvedOptions.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "intl402/supportedLocalesOf-unicode-extensions-ignored.js",
+    "status" : "PASS",
+    "statusOverrides" : {
+      "SVM" : "SKIP"
+    },
+    "comment" : "Segfaults on SVM, see GR-15064"
+  }, {
+    "filePath" : "language/eval-code/direct/super-prop-method.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/eval-code/direct/var-env-lower-lex-non-strict.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/eval-code/indirect/lex-env-heritage.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/arrow-function/scope-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/arrow-function/scope-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/arrow-function/scope-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/arrow-function/scope-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/arrow-function/scope-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/assignment/destructuring/obj-prop-__proto__dup.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/assignment/S11.13.1_A5_T5.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/async-arrow-function/await-as-param-ident-nested-arrow-parameter-position.js",
+    "status" : "FAIL",
+    "comment" : "test262 update 2018-07-12"
+  }, {
+    "filePath" : "language/expressions/async-arrow-function/await-as-param-nested-arrow-parameter-position.js",
+    "status" : "FAIL",
+    "comment" : "test262 update 2018-07-12"
+  }, {
+    "filePath" : "language/expressions/async-arrow-function/await-as-param-rest-nested-arrow-parameter-position.js",
+    "status" : "FAIL",
+    "comment" : "test262 update 2018-07-12"
+  }, {
+    "filePath" : "language/expressions/async-arrow-function/early-errors-arrow-formals-lineterminator.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2017-07-10)"
+  }, {
+    "filePath" : "language/expressions/class/accessor-name-inst-computed-yield-expr.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2017-07-10)"
+  }, {
+    "filePath" : "language/expressions/class/accessor-name-static-computed-yield-expr.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2017-07-10)"
+  }, {
+    "filePath" : "language/expressions/class/elements/syntax/early-errors/grammar-special-meth-ctor-async-meth.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-01-15)"
+  }, {
+    "filePath" : "language/expressions/dynamic-import/usage-from-eval.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2018-10-29)"
+  }, {
+    "filePath" : "language/expressions/function/scope-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/function/scope-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/function/scope-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/function/scope-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/function/scope-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/generators/scope-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/generators/scope-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/generators/scope-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/generators/scope-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/generators/scope-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-gen-meth-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-gen-meth-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-gen-meth-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-gen-meth-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-gen-meth-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-getter-body-lex-distinc.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-meth-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-meth-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-meth-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-meth-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-meth-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/object/scope-setter-body-lex-distinc.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/super/prop-dot-cls-val-from-eval.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/super/prop-dot-obj-val-from-eval.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/super/prop-expr-cls-val-from-eval.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/expressions/super/prop-expr-obj-val-from-eval.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/function-code/each-param-has-own-non-shared-eval-scope.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "language/function-code/each-param-has-own-scope.js",
+    "status" : "FAIL",
+    "comment" : "new fails after update 2018-03-19"
+  }, {
+    "filePath" : "language/function-code/eval-param-env-with-computed-key.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/function-code/eval-param-env-with-prop-initializer.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/literals/regexp/u-surrogate-pairs-atom-escape-decimal.js",
+    "status" : "FAIL",
+    "comment" : "Back-references cause TRegex to bail out and then JONI is unable to cope with Unicode."
+  }, {
+    "filePath" : "language/statements/class/accessor-name-inst-computed-yield-expr.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2017-07-10)"
+  }, {
+    "filePath" : "language/statements/class/accessor-name-static-computed-yield-expr.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2017-07-10)"
+  }, {
+    "filePath" : "language/statements/class/elements/syntax/early-errors/grammar-special-meth-ctor-async-meth.js",
+    "status" : "FAIL",
+    "comment" : "TODO: evaluate (Test262 tests update 2019-01-15)"
+  }, {
+    "filePath" : "language/statements/for-in/head-const-bound-names-fordecl-tdz.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-in/head-let-bound-names-fordecl-tdz.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-in/scope-head-lex-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-of/head-const-bound-names-fordecl-tdz.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-of/head-let-bound-names-fordecl-tdz.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-of/head-lhs-let.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/for-of/scope-head-lex-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/function/scope-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/function/scope-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/function/scope-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/function/scope-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/function/scope-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/generators/scope-body-lex-distinct.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/generators/scope-param-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/generators/scope-param-elem-var-open.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/generators/scope-param-rest-elem-var-close.js",
+    "status" : "FAIL"
+  }, {
+    "filePath" : "language/statements/generators/scope-param-rest-elem-var-open.js",
+    "status" : "FAIL"
+  } ]
+}
